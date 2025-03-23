@@ -49,14 +49,20 @@ TEST(st2, sumPrime) {
   EXPECT_EQ(sumPrime(10), 17);
 }
 
-TEST(st3, edgeCases) {
+TEST(st3, edgeCases1) {
   EXPECT_EQ(sumPrime(0), 0);
   EXPECT_EQ(sumPrime(1), 0);
   EXPECT_EQ(sumPrime(2), 0);
+}
+
+TEST(st3, edgeCases2) {
   EXPECT_THROW(nPrime(0), std::invalid_argument);
 }
 
-TEST(st3, largeNumbers) {
+TEST(st3, largeNumbers1) {
   EXPECT_EQ(nPrime(10000), 104729);
+}
+
+TEST(st3, largeNumbers2) {
   EXPECT_EQ(nextPrime(1000000), 1000003);
 }
